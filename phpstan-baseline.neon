@@ -1,0 +1,385 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined static method Session\:\:checkRightsOr\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: front/config.form.php
+
+		-
+			message: '#^Access to constant RESERVEANITEM on an unknown class ReservationItem\.$#'
+			identifier: class.notFound
+			count: 1
+			path: front/menu.php
+
+		-
+			message: '#^Call to an undefined static method Session\:\:checkRightsOr\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: front/menu.php
+
+		-
+			message: '#^Call to an undefined static method Session\:\:checkRightsOr\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: front/multiedit.form.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:manageBeginAndEndPlanDates\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: front/multiedit.form.php
+
+		-
+			message: '#^Access to constant RESERVEANITEM on an unknown class ReservationItem\.$#'
+			identifier: class.notFound
+			count: 1
+			path: front/query.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:logInFile\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 4
+			path: hook.php
+
+		-
+			message: '#^Call to static method Register\(\) on an unknown class CronTask\.$#'
+			identifier: class.notFound
+			count: 2
+			path: hook.php
+
+		-
+			message: '#^Call to static method unregister\(\) on an unknown class CronTask\.$#'
+			identifier: class.notFound
+			count: 2
+			path: hook.php
+
+		-
+			message: '#^Instantiated class CronTask not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: hook.php
+
+		-
+			message: '#^Instantiated class Reservation not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: hook.php
+
+		-
+			message: '#^Access to an undefined property PluginReservationApi\:\:\$session_write\.$#'
+			identifier: property.notFound
+			count: 3
+			path: inc/api.php
+
+		-
+			message: '#^Access to an undefined static property PluginReservationApi\:\:\$api_url\.$#'
+			identifier: staticProperty.notFound
+			count: 12
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:cors\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:getHttpBody\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:initApi\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:initSession\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:inlineDocumentation\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:killSession\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:messageBadArrayError\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:messageLostError\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:messageNotfoundError\(\)\.$#'
+			identifier: method.notFound
+			count: 9
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:retrieveSession\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:returnError\(\)\.$#'
+			identifier: method.notFound
+			count: 10
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationApi\:\:showDebug\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to an undefined static method PluginReservationApi\:\:header\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Call to static method uploadFiles\(\) on an unknown class GLPIUploadHandler\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/api.php
+
+		-
+			message: '#^Instantiated class Reservation not found\.$#'
+			identifier: class.notFound
+			count: 4
+			path: inc/api.php
+
+		-
+			message: '#^Instantiated class ReservationItem not found\.$#'
+			identifier: class.notFound
+			count: 2
+			path: inc/api.php
+
+		-
+			message: '#^Function getEntitiesRestrictRequest not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: inc/category.class.php
+
+		-
+			message: '#^Instantiated class ReservationItem not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/category_item.class.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:logInFile\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/includes.php
+
+		-
+			message: '#^Call to an undefined method PluginReservationMenu\:\:addStandardTab\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to an undefined static method Html\:\:getCheckbox\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to an undefined static method Html\:\:showDateTimeField\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 2
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to an undefined static method Session\:\:isMultiEntitiesMode\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 3
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:getItemTypeSearchURL\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 4
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to static method canCreate\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to static method canDelete\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to static method canUpdate\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to static method canView\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Call to static method getFormURL\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Function formatUserName not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Function getSingular not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Instantiated class Reservation not found\.$#'
+			identifier: class.notFound
+			count: 2
+			path: inc/menu.class.php
+
+		-
+			message: '#^Instantiated class State not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/menu.class.php
+
+		-
+			message: '#^Access to constant RESERVEANITEM on an unknown class ReservationItem\.$#'
+			identifier: class.notFound
+			count: 3
+			path: inc/multiedit.class.php
+
+		-
+			message: '#^Call to an undefined static method Dropdown\:\:showTimeStamp\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/multiedit.class.php
+
+		-
+			message: '#^Call to an undefined static method Html\:\:showDateTimeField\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/multiedit.class.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:logInFile\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/multiedit.class.php
+
+		-
+			message: '#^Instantiated class Reservation not found\.$#'
+			identifier: class.notFound
+			count: 3
+			path: inc/multiedit.class.php
+
+		-
+			message: '#^Instantiated class ReservationItem not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/multiedit.class.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:addslashes_deep\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 3
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Call to an undefined static method Toolbox\:\:logInFile\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 7
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Call to static method canCreate\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Call to static method canDelete\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Call to static method canUpdate\(\) on an unknown class Reservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Function getEntitiesRestrictRequest not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Instantiated class Reservation not found\.$#'
+			identifier: class.notFound
+			count: 5
+			path: inc/reservation.class.php
+
+		-
+			message: '#^Function formatUserName not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: inc/task.class.php
+
+		-
+			message: '#^Instantiated class Reservation not found\.$#'
+			identifier: class.notFound
+			count: 4
+			path: inc/task.class.php
+
+		-
+			message: '#^Parameter \$target of method PluginReservationTask\:\:addData\(\) has invalid type NotificationTargetReservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/task.class.php
+
+		-
+			message: '#^Parameter \$target of method PluginReservationTask\:\:addEvents\(\) has invalid type NotificationTargetReservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/task.class.php
+
+		-
+			message: '#^Parameter \$target of method PluginReservationTask\:\:addTarget\(\) has invalid type NotificationTargetReservation\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/task.class.php
