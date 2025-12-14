@@ -12,55 +12,7 @@ function plugin_reservation_install()
     $version = plugin_version_reservation();
     $migration = new Migration($version['version']);
 
-    if (!$DB->tableExists("glpi_plugin_reservation_categories")) {
-        $query = "CREATE TABLE `glpi_plugin_reservation_categories` (
-                `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-                `name` VARCHAR(255) NOT NULL,
-                PRIMARY KEY (`id`),
-                UNIQUE (`name`)
-                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
-
-        $DB->queryOrDie($query, $DB->error());
-    }
-
-    if (!$DB->tableExists("glpi_plugin_reservation_categories_items")) {
-        $query = "CREATE TABLE `glpi_plugin_reservation_categories_items` (
-                `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-                `categories_id` int UNSIGNED NOT NULL,
-                `reservationitems_id` int UNSIGNED NOT NULL,
-                `priority` int(11) NOT NULL,
-                PRIMARY KEY (`id`),
-                  KEY `reservationitems_id` (`reservationitems_id`),
-                  KEY `categories_id` (`categories_id`),
-                  UNIQUE (`categories_id`, `reservationitems_id`)
-                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
-
-        $DB->queryOrDie($query, $DB->error());
-    }
-
-    if ($DB->tableExists('glpi_plugin_reservation_reservations')) { // UPDATE 2.2.0
-        $migration->addField(
-            'glpi_plugin_reservation_reservations',
-            'checkindate',
-            'datetime',
-            ['null' => true]
-        );
-    }
-
-    if (!$DB->tableExists("glpi_plugin_reservation_reservations")) { //INSTALL >= 2.0.0
-        $query = "CREATE TABLE `glpi_plugin_reservation_reservations` (
-                `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-                `reservations_id` int UNSIGNED NOT NULL,
-                `baselinedate` timestamp NOT NULL,
-                `effectivedate`  timestamp NULL,
-                `mailingdate` timestamp NULL,
-                `checkindate` timestamp NULL,
-                PRIMARY KEY (`id`),
-                KEY `reservations_id` (`reservations_id`)
-                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
-
-        $DB->queryOrDie($query, $DB->error());
-    }
+    // All schema changes are now handled by migration files in sql/
 
     // 2.2.0
     // mettre une date de checkin pour toutes les reservations precedentes à la date actuelle !
