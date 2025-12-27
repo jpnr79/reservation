@@ -281,10 +281,20 @@ class PluginReservationReservation extends CommonDBTM
                     $item_id
                 )
             );
-            Toolbox::logInFile('reservations_plugin', "addItemToResa : " . $item_id . " => " . $reservation_id . "\n", $force = false);
+            Toolbox::logInFile('reservations_plugin', sprintf(
+                "SUCCESS [reservation.class.php:addItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
+                $item_id,
+                $reservation_id,
+                isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
+            ), $force = false);
             return true;
         } else {
-            Toolbox::logInFile('reservations_plugin', "Error in addItemToResa : " . $item_id . " <=> " . $reservation_id . "\n", $force = false);
+            Toolbox::logInFile('reservations_plugin', sprintf(
+                "ERROR [reservation.class.php:addItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
+                $item_id,
+                $reservation_id,
+                isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
+            ), $force = false);
         }
         return false;
     }
@@ -316,10 +326,20 @@ class PluginReservationReservation extends CommonDBTM
                     $item_id
                 )
             );
-            Toolbox::logInFile('reservations_plugin', "switchItemToResa : " . $item_id . " <=> " . $reservation_id . "\n", $force = false);
+            Toolbox::logInFile('reservations_plugin', sprintf(
+                "SUCCESS [reservation.class.php:switchItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
+                $item_id,
+                $reservation_id,
+                isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
+            ), $force = false);
             return true;
         } else {
-            Toolbox::logInFile('reservations_plugin', "Error in switchItemToResa : " . $item_id . " <=> " . $reservation_id . "\n", $force = false);
+            Toolbox::logInFile('reservations_plugin', sprintf(
+                "ERROR [reservation.class.php:switchItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
+                $item_id,
+                $reservation_id,
+                isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
+            ), $force = false);
         }
         return false;
     }

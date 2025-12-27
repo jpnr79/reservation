@@ -251,7 +251,7 @@ function makeAChange(redirect) {
          location.href = redirect;
       },
       error: function() {
-         console.log("error");
+         console.error("[reservation/js/tools.js] Error occurred in function (add context here if possible)", arguments);
       }
    });
 }
