@@ -167,7 +167,12 @@ class PluginReservationReservation extends CommonDBTM
                 $reservation_id
             )
         );
-        Toolbox::logInFile('reservations_plugin', "sendMail : " . $reservation_id . "\n", $force = false);
+        $__msg = "sendMail : " . $reservation_id . "\n";
+        if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+            Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+        } else {
+            error_log('[reservations_plugin] ' . $__msg);
+        }
         return true;
     }
 
@@ -199,7 +204,12 @@ class PluginReservationReservation extends CommonDBTM
                 $reservation_id
             )
         );
-        Toolbox::logInFile('reservations_plugin', "checkoutReservation : " . $reservation_id . "\n", $force = false);
+        $__msg = "checkoutReservation : " . $reservation_id . "\n";
+        if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+            Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+        } else {
+            error_log('[reservations_plugin] ' . $__msg);
+        }
         return true;
     }
 
@@ -241,7 +251,12 @@ class PluginReservationReservation extends CommonDBTM
                     $reservation_id
                 )
             );
-            Toolbox::logInFile('reservations_plugin', "checkinReservation : " . $reservation_id . "\n", $force = false);
+            $__msg = "checkinReservation : " . $reservation_id . "\n";
+            if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+                Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+            } else {
+                error_log('[reservations_plugin] ' . $__msg);
+            }
             NotificationEvent::raiseEvent('plugin_reservation_checkin', $resa);
             return true;
         }
@@ -281,20 +296,30 @@ class PluginReservationReservation extends CommonDBTM
                     $item_id
                 )
             );
-            Toolbox::logInFile('reservations_plugin', sprintf(
+            $__msg = sprintf(
                 "SUCCESS [reservation.class.php:addItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
                 $item_id,
                 $reservation_id,
                 isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
-            ), $force = false);
+            );
+            if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+                Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+            } else {
+                error_log('[reservations_plugin] ' . $__msg);
+            }
             return true;
         } else {
-            Toolbox::logInFile('reservations_plugin', sprintf(
+            $__msg = sprintf(
                 "ERROR [reservation.class.php:addItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
                 $item_id,
                 $reservation_id,
                 isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
-            ), $force = false);
+            );
+            if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+                Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+            } else {
+                error_log('[reservations_plugin] ' . $__msg);
+            }
         }
         return false;
     }
@@ -326,20 +351,30 @@ class PluginReservationReservation extends CommonDBTM
                     $item_id
                 )
             );
-            Toolbox::logInFile('reservations_plugin', sprintf(
+            $__msg = sprintf(
                 "SUCCESS [reservation.class.php:switchItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
                 $item_id,
                 $reservation_id,
                 isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
-            ), $force = false);
+            );
+            if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+                Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+            } else {
+                error_log('[reservations_plugin] ' . $__msg);
+            }
             return true;
         } else {
-            Toolbox::logInFile('reservations_plugin', sprintf(
+            $__msg = sprintf(
                 "ERROR [reservation.class.php:switchItemToResa] item_id=%s, reservation_id=%s, user=%s\n",
                 $item_id,
                 $reservation_id,
                 isset($_SESSION['glpiname']) ? $_SESSION['glpiname'] : 'unknown'
-            ), $force = false);
+            );
+            if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+                Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+            } else {
+                error_log('[reservations_plugin] ' . $__msg);
+            }
         }
         return false;
     }
