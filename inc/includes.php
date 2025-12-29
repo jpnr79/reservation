@@ -10,5 +10,12 @@ $tabConfig = ["tabmine", "tabcurrent", "tabcoming"];
 
 function logIfDebug($message = '', $data = '')
 {
-    $_SESSION['glpi_use_mode'] && Toolbox::logInFile('reservations_plugin', $message . " : " . json_encode($data) . "\n", $force = false);
+    if (!empty($_SESSION['glpi_use_mode'])) {
+        $__msg = $message . " : " . json_encode($data) . "\n";
+        if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+            Toolbox::logInFile('reservations_plugin', $__msg, $force = false);
+        } else {
+            error_log('[reservations_plugin] ' . $__msg);
+        }
+    }
 }
